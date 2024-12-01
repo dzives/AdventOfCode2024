@@ -1,5 +1,5 @@
 #!/bin/bash
-day=$(date +%e)
+day=$(date +%-d)
 cat <<EOL > "Day$day.ipynb"
 {
  "cells": [
@@ -11,7 +11,7 @@ cat <<EOL > "Day$day.ipynb"
      "source": [
         "from aocd import get_data\n",
         "\n",
-        "sample_data = 'abc'\n",
+        "sample_data = \"\"\"\"\"\"\n",
         "\n",
         "def parse(sample=False):\n",
         "    if not sample:\n",
@@ -70,12 +70,12 @@ cat <<EOL > "Day$day.ipynb"
         "    p2c = None\n",
         "    print(f'sample: ')\n",
         "    start = time()\n",
-        "    p1r = part1(False)\n",
+        "    p1r = part1(True)\n",
         "    end = time()\n",
         "    p1t = end-start\n",
         "    if p2c:\n",
         "        start = time()\n",
-        "        p2r = part2(False)\n",
+        "        p2r = part2(True)\n",
         "        end = time()\n",
         "        p2t = end-start\n",
         "    if p1c == p1r:\n",
@@ -93,12 +93,12 @@ cat <<EOL > "Day$day.ipynb"
         "        print(f'Part 2: {p2r}|Time: {p2t:.3f}s')\n",
         "    print(f'input: ')\n",
         "    start = time()\n",
-        "    p1r = part1(True)\n",
+        "    p1r = part1(False)\n",
         "    end = time()\n",
         "    p1t = end-start\n",
         "    if p2c:\n",
         "        start = time()\n",
-        "        p2r = part2(True)\n",
+        "        p2r = part2(False)\n",
         "        end = time()\n",
         "        p2t = end-start\n",
         "    print(f'Part 1: {p1r}|Time: {p1t:.3f}s')\n",
