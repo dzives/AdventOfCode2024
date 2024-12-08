@@ -11,6 +11,7 @@ cat <<EOL > "Day$day.ipynb"
      "source": [
         "from aocd import get_data\n",
         "\n",
+        "# https://adventofcode.com/2024/day/$day",
         "sample_data = \"\"\"\"\"\"\n",
         "\n",
         "def parse(sample=False):\n",
